@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://github-trends.vercel.app/sitemap.xml
