@@ -13,7 +13,7 @@ function App({ Component, pageProps }) {
 
   return (
     <Fragment>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" />
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" />
       <GlobalStyle />
       <DefaultSeo {...SEO} />
       <Head>
@@ -49,6 +49,11 @@ function App({ Component, pageProps }) {
   );
 }
 
+App.propTypes = {
+  Component: PropTypes.elementType,
+  pageProps: PropTypes.object
+};
+
 const FixNum = (num) => Number((num / 1000).toFixed(6));
 
 export function reportWebVitals(metric) {
@@ -76,10 +81,5 @@ export function reportWebVitals(metric) {
       break;
   }
 }
-
-App.propTypes = {
-  Component: PropTypes.elementType,
-  pageProps: PropTypes.object
-};
 
 export default App;

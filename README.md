@@ -5,7 +5,7 @@
 
 ---
 
-Working Prototype: https://github-trends.vercel.app/
+Working Prototype: https://github-trending-repos.vercel.app/page/1
 
 ## Contents
 
@@ -15,16 +15,13 @@ Working Prototype: https://github-trends.vercel.app/
 ## Details about the project:
 
 - React library.
-- Next.js framework for Incremental Static Regeneration.
+- Nextjs framework for Incremental Static Regeneration.
 - Styled-components.
+- Theme Dark/Light mode
 - Axios to send asynchronous HTTP request to GitHub REST API.
 - PWA with next-offline.
 - SEO with next-seo.
-- Using react-virtualized library to efficiently render a large list.
-- Testing:
-  - Static Testing with eslint, prop-types and prettier.
-  - Unit and Integration Testing with jest and react testing-library.
-  - End to End Testing with cypress.
+- Day.js date-time library.
 
 ## Getting Started
 

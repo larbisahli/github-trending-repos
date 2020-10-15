@@ -5,17 +5,17 @@ const description =
 const SEO = {
   title,
   description,
-  canonical: 'https://github-trends.vercel.app/',
+  canonical: 'https://github-trending-repos.vercel.app/',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://github-trends.vercel.app/?pg=1',
+    url: 'https://github-trending-repos.vercel.app/page/1',
     title,
     description,
     images: [
       {
         url:
-          'https://github-trends.vercel.app/static/images/Most-Popular-GitHub-Repos-social-media.jpg',
+          'https://github-trending-repos.vercel.app/static/images/Most-Popular-GitHub-Repos-social-media.jpg',
         alt: title,
         width: 1200,
         height: 630

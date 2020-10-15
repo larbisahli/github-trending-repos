@@ -18,13 +18,15 @@ export const ElementsCollection = css`
   html,
   body {
     display: block !important;
-    font-family: 'Roboto', -apple-system, sans-serif, Segoe UI, Roboto,
-      Helvetica;
+    font-family: -apple-system, sans-serif, Segoe UI, Roboto, Helvetica;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1;
     letter-spacing: 0;
-    background: #fff;
+    transition-property: all;
+    transition-duration: var(--bg-transition-duration);
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
   }
 
   p {
@@ -49,7 +51,6 @@ export const ElementsCollection = css`
   a:focus,
   a:active {
     text-decoration: none;
-    /* color: inherit; */
   }
 
   div {

@@ -1,5 +1,8 @@
 module.exports = {
-  plugins: ['simple-import-sort'],
+  plugins: [
+    'simple-import-sort'
+    //  'eslint-plugin-prettier'
+  ],
   root: true,
   parserOptions: {
     ecmaVersion: 2020,
@@ -21,8 +24,9 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended'
-    // 'plugin:prettier/recommended'
+    'plugin:jsx-a11y/recommended',
+    // 'plugin:prettier/recommended',
+    'eslint-config-prettier'
   ],
   rules: {
     // 'prettier/prettier': ['error', {}, { usePrettierrc: true }],

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const RelativePosition = styled.div`
   position: relative;
@@ -26,8 +26,23 @@ export const DisFlex_AIC_JCC = styled.div`
   justify-content: center;
 `;
 
-// <------- CSS --------->
+const PreloadSkeleton = keyframes`
+0% {
+    background-position: -369px 0;
+   }
 
-export const DisNone = css`
-  display: none;
+100% {
+    background-position: 369px 0;
+   }
+`;
+
+export const PreloadEffect = styled.div`
+  background-color: var(--skeleton-bgc);
+  background-repeat: repeat-y;
+  animation-fill-mode: forwards;
+  animation: ${PreloadSkeleton} 1s linear 0s infinite;
+  background-image: linear-gradient(
+    var(--skeleton-gradient) 120px,
+    transparent 0
+  );
 `;

@@ -1,5 +1,9 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "env": {
+    "GITHUB_TOKEN_KEY_EXAMPLE": "@GITHUB_TOKEN_KEY"
+  },
+  "redirects": [{ "source": "/", "destination": "/page/1" }]
 }

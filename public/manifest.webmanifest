@@ -3,8 +3,8 @@
     "short_name": "Github Trends",
     "lang": "en-US",
     "description": "A small webapp that will list the most starred Github repos that were created in the last 30 days.",
-    "start_url": "/?pg=1",
-    "scope": "https://github-trends.vercel.app/",
+    "start_url": "/page/1",
+    "scope": "https://github-trending-repos.vercel.app/page/",
     "theme_color": "#603cba",
     "background_color": "#fff",
     "display": "standalone",
@@ -34,7 +34,7 @@
     "screenshots": [],
     "shortcuts": [{
         "name": "G-Trends",
-        "url": "/?pg=1",
+        "url": "/page/1",
         "icons": [{
             "src": "/static/favicons/favicon-96x96.png",
             "sizes": "96x96",
