@@ -5,7 +5,7 @@ const description =
 const SEO = {
   title,
   description,
-  canonical: 'https://github-trending-repos.vercel.app/',
+  canonical: 'https://github-trending-repos.vercel.app/page/',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
