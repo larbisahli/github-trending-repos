@@ -210,9 +210,11 @@ export const Repo_Body_Top__Title = styled.div`
   font-size: 1.15em;
   cursor: pointer;
   color: var(--txt-blue);
+  word-break: break-all !important;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 
   &:hover {
     text-decoration: underline;
