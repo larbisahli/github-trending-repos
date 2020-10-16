@@ -14,7 +14,10 @@ import PropTypes from 'prop-types';
 function Page({ repos }) {
   const Router = useRouter();
   const { pg } = Router.query;
-  const [ListOfRepos, setListOfRepos] = useState([]);
+  const [ListOfRepos, setListOfRepos] = useState([
+    ...(repos?.LatestRepos ?? [])
+  ]);
+  const TotalPagesRef = useRef(0);
   const NextPageRef = useRef(1);
   const { totalPages, LatestRepos } = repos ?? {
     totalPages: 0,
@@ -28,20 +31,31 @@ function Page({ repos }) {
   }, []);
 
   useEffect(() => {
+    TotalPagesRef.current = totalPages;
+  }, [totalPages]);
+
+  useEffect(() => {
     NextPageRef.current = NextPageRef.current + 1;
-    setListOfRepos((repos_) => {
-      return [...repos_, ...LatestRepos];
-    });
+    if (LatestRepos[0]?.id !== ListOfRepos[0]?.id) {
+      setListOfRepos((repos_) => {
+        return [...repos_, ...LatestRepos];
+      });
+    }
   }, [pg]);
 
   const handleScoll = (e) => {
+    const NextPage = NextPageRef.current;
+    const TotalPages = TotalPagesRef.current;
     if (e.isTrusted) {
-      if (totalPages <= NextPageRef.current) return;
+      if (TotalPages <= NextPage) {
+        Router.push('/page/1');
+        return;
+      }
       const lastRepo = document.getElementById('repos-list').lastChild;
       const lastRepoOffset = lastRepo.offsetTop + lastRepo.clientHeight;
       const pageOffset = window.pageYOffset + window.innerHeight;
       if (pageOffset > lastRepoOffset - 30) {
-        Router.push(`/page/${NextPageRef.current}`);
+        Router.push(`/page/${NextPage}`);
       }
     }
   };
@@ -120,7 +134,7 @@ export async function getStaticProps({ params }) {
     props: {
       repos
     },
-    revalidate: 86400 // Update every day
+    revalidate: 86400 // Update static pages once a day every day
   };
 }
 
