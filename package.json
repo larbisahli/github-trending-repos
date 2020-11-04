@@ -18,7 +18,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "dayjs": "^1.9.1",
-    "next": "9.5.3",
+    "next": "^10.0.0",
     "next-google-fonts": "^1.2.1",
     "next-offline": "^5.0.2",
     "next-seo": "^4.11.0",

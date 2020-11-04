@@ -169,17 +169,14 @@ export const Repo_Thumbnail = styled(DisFlex)`
 export const Repo_Thumbnail_wrap = styled.div`
   height: 120px;
   width: 120px;
+  box-shadow: 0 0 2px 1px var(--img-border-color);
+  background-color: #f9f9f9;
+  border-radius: var(--border-radius);
 
   @media screen and (max-width: 735px) {
     height: 80px;
     width: 80px;
   }
-`;
-
-export const Repo_Thumbnail_wrap_img = styled.img`
-  border-radius: var(--border-radius);
-  border: 1px solid var(--img-border-color);
-  background-color: #f9f9f9;
 `;
 
 export const Repo_Body = styled(DisFlex)`

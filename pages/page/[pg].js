@@ -8,17 +8,21 @@ import {
   ScrollBtn
 } from '../../Components';
 import { useRouter } from 'next/router';
-import { GetGithubRepo, NumberOfDays } from '../../utils';
+import { NumberOfDays } from '../../utils';
+import GetGithubRepo from '../../api/GetGithubRepo';
 import PropTypes from 'prop-types';
 
 function Page({ repos }) {
   const Router = useRouter();
   const { pg } = Router.query;
+
   const [ListOfRepos, setListOfRepos] = useState([
     ...(repos?.LatestRepos ?? [])
   ]);
+
   const TotalPagesRef = useRef(0);
   const NextPageRef = useRef(1);
+
   const { totalPages, LatestRepos } = repos ?? {
     totalPages: 0,
     LatestRepos: []

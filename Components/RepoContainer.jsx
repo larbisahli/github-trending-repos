@@ -5,7 +5,6 @@ import {
   Repo_Container,
   Repo_Thumbnail,
   Repo_Thumbnail_wrap,
-  Repo_Thumbnail_wrap_img,
   Repo_Body_Top,
   Repo_Body,
   Repo_Body_Top__Title,
@@ -21,7 +20,7 @@ import { FormatNumber } from '../utils';
 
 const RepoContainer = ({ Item }) => {
   return (
-    <Repo_Container>
+    <Repo_Container data-testid="repo-test">
       {/* Thumbnail container */}
       <Repo_Thumbnail>
         <Repo_Thumbnail_wrap
@@ -31,10 +30,7 @@ const RepoContainer = ({ Item }) => {
           rel="noopener noreferrer"
           title={Item.user_name}
         >
-          <Repo_Thumbnail_wrap_img
-            src={Item.avatar_url}
-            alt=""
-          ></Repo_Thumbnail_wrap_img>
+          <img src={Item.avatar_url} alt={Item.user_name} />
         </Repo_Thumbnail_wrap>
       </Repo_Thumbnail>
       <Repo_Body>
