@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocalStorage } from './';
 
-const generalBackgroundDark = '#1f1f1f';
+const generalBackgroundDark = '#0d1117';
 const generalBackgroundLight = '#f9f9f9';
 
 export function useDarkMode() {

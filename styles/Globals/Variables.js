@@ -21,8 +21,8 @@ export const RootVariables = css`
   .dark-mode {
     --dark-env: 1;
     --border-color: #444444;
-    --theme-btn-bg: #222;
-    --txt-blue: #5f9ee7;
+    --theme-btn-bg: #333;
+    --txt-blue: #58a6ff;
     --des-txt-color: #d4d4d4;
     --stat-txt-color: #bdbdbd;
     --skeleton-bgc: #3f3f3f98;
